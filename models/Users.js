@@ -1,8 +1,7 @@
 const { Schema, model } = require('mongoose');
-const thoughtSchema = require('./Assignment'); // update to thoughts models when thoughts is made
-const friendSchema = require('./Assignment'); // update to friend models when thoughts is made
+const Thought = require('./Thoughts'); // update to thoughts models when thoughts is made
+const Friend = require('./Friends'); // update to friend models when thoughts is made
 
-// Schema to create Student model
 const userSchema = new Schema(
   {
     userName: {
@@ -35,6 +34,6 @@ const userSchema = new Schema(
   }
 );
 
-const User = model('user', userSchema);
+const User = new model('user', userSchema);
 
-module.exports = User;
+module.exports = {User};

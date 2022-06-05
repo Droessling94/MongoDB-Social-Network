@@ -1,17 +1,17 @@
 const { Schema, model } = require('mongoose');
 
-// Schema to create Student model
+
 const reactionSchema = new Schema(
   {
-    userName: {
+    reactionTitle: {
       type: String,
       required: true,
       max_length: 50,
     },
-    email: {
+    reactionBody: {
         type: String,
         required: true,
-        max_length: 50,
+        max_length: 300,
       },
   },
   {
